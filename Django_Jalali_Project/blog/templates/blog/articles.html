@@ -1,0 +1,19 @@
+{% load jformat %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    {% for article in articles %}
+        {{ article.title }}
+        <br>
+        {{ article.text }}
+        <br>
+        {{ article.created_at|jformat:"%d/%m/%Y" }}
+        <br>
+        <br>
+    {% endfor %}
+</body>
+</html>
